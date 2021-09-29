@@ -1,0 +1,26 @@
+<mat-toolbar>
+
+    <div>
+
+       <label a routerLink="/home">Nopser</label>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="end" class="flexExpand">
+        <button mat-button a routerLink="/respondent">Respondent</button>
+        <button mat-button a routerLink="/research">Researcher</button>
+        <button mat-button a routerLink="/login">Login</button>
+        <button mat-button a routerLink="/register" fxLayout="auto" type="SignUp">SignUp</button>
+        
+        <!--<button mat-icon-button >
+            <mat-icon>
+                menu
+            </mat-icon>
+            <mat-icon ></mat-icon>
+                close
+            </mat-icon>
+        </button>-->
+    </div>
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,124 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="30">
+        <mat-toolbar fxLayoutAlign="center center " color="primary" Align="center">Signup</mat-toolbar>
+
+        <mat-tab-group mat-stretch-tabs>
+            <mat-tab label="As a Researcher">
+                 <form fxLayoutAlign="stretch" fxLayout="column" class="register-form">
+                    <div class='info' fxLayout="row wrap" fxLayoutAlign="space-between stretch">
+                        <mat-form-field>
+                            <input matInput placeholder="First Name">
+                        </mat-form-field>
+      
+                        <mat-form-field>
+                            <input matInput placeholder="Last Name">
+                        </mat-form-field>
+                    </div>
+            
+                         <mat-form-field>
+                            <input
+                                matInput
+                                placeholder="Email"
+                                required
+                                name="email"
+                                ngModel
+                                #email="ngModel">
+                                <mat-error *ngIf="email.invalid">Email is required</mat-error>
+                                <mat-icon matSuffix>email</mat-icon>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input
+                                matInput
+                                placeholder="Password"
+                                [type]="hide ? 'password' : 'text'"
+                                required
+                                minlength="6"
+                                name="password"
+                                ngModel
+                                #password="ngModel">
+                                <mat-error *ngIf="password.errors && password.errors.required">Password is required</mat-error>
+                                <mat-error *ngIf="password.errors && password.errors.minlength">Password must be of length 6</mat-error>
+                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput placeholder="Phone No.">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Team</mat-label>
+                                <mat-select [(value)]="team">
+                                    <mat-option value="yes">Yes</mat-option>
+                                    <mat-option value="no">No</mat-option>
+                                </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Company</mat-label>
+                                <mat-select [(value)]="company">
+                                    <mat-option value="yes">Yes</mat-option>
+                                    <mat-option value="no">No</mat-option>
+                                </mat-select>
+                        </mat-form-field>
+                </form>          
+
+                 <form fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="20px" class="button">
+                    <button mat-raised-button color="primary" type="submit">Register</button>
+                    <button mat-raised-button color="primary" type="cancel">Cancel</button>
+                </form>
+            </mat-tab>
+
+            <mat-tab label="As a Respondent">
+                <form fxLayoutAlign="stretch" fxLayout="column" class="register-form">
+                   <div class='info' fxLayout="row wrap" fxLayoutAlign="space-between stretch">
+                       <mat-form-field>
+                           <input matInput placeholder="First Name">
+                       </mat-form-field>
+     
+                       <mat-form-field>
+                           <input matInput placeholder="Last Name">
+                       </mat-form-field>
+                   </div>
+           
+                        <mat-form-field>
+                           <input
+                               matInput
+                               placeholder="Email"
+                               required
+                               name="email"
+                               ngModel
+                               #email="ngModel">
+                               <mat-error *ngIf="email.invalid">Email is required</mat-error>
+                               <mat-icon matSuffix>email</mat-icon>
+                       </mat-form-field>
+
+                       <mat-form-field>
+                           <input
+                               matInput
+                               placeholder="Password"
+                               [type]="hide ? 'password' : 'text'"
+                               required
+                               minlength="6"
+                               name="password"
+                               ngModel
+                               #password="ngModel">
+                               <mat-error *ngIf="password.errors && password.errors.required">Password is required</mat-error>
+                               <mat-error *ngIf="password.errors && password.errors.minlength">Password must be of length 6</mat-error>
+                               <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                   <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                               </button>
+                       </mat-form-field>
+               </form>          
+
+                <form fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="20px" class="button">
+                   <button mat-raised-button color="primary" type="submit">Register</button>
+                   <button mat-raised-button color="primary" type="cancel">Cancel</button>
+               </form>
+           </mat-tab>
+        </mat-tab-group>
+
+    </mat-card>
+</div>

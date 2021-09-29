@@ -1,0 +1,33 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="30">
+        <mat-toolbar fxLayoutAlign="center center" color="primary" Align="center">Login Page</mat-toolbar>
+        
+        <mat-tab-group mat-stretch-tabs>
+          <mat-tab label="I'm Researcher">
+            <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+              <mat-form-field>
+                <input matInput placeholder="Username">
+              </mat-form-field>
+            
+              <mat-form-field>
+                  <input matInput type="password" placeholder="Password">
+                </mat-form-field>
+                <button mat-raised-button type="submit">Login</button>
+            </form>  
+          </mat-tab>
+
+          <mat-tab label="I'm Respondent">
+            <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+              <mat-form-field>
+                <input matInput placeholder="Username">
+              </mat-form-field>
+            
+              <mat-form-field>
+                  <input matInput type="password" placeholder="Password">
+                </mat-form-field>
+                <button mat-raised-button type="submit">Login</button>
+            </form>  
+          </mat-tab>
+        </mat-tab-group>        
+    </mat-card>
+</div>
